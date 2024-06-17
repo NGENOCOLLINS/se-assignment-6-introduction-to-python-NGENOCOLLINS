@@ -7,40 +7,140 @@ Answer the following questions based on your understanding of Python programming
 
  Questions:
 
-1. Python Basics:
-   - What is Python, and what are some of its key features that make it popular among developers? Provide examples of use cases where Python is particularly effective.
+# Python Basics
+Python is a high-level, interpreted programming language known for its readability and simplicity. Key features include:Easy-to-read syntax: Resembles English, making it accessible.
+Dynamically typed: No need to declare variable types.
+Extensive standard library: Rich set of modules and packages.
+Interpreted language: Runs directly from the source code without a separate compilation step.
+Community support: Large and active user community.
+#Use Cases:Web Development: Frameworks like Django and Flask.
+Data Analysis: Libraries like pandas, NumPy, and Matplotlib.
+Machine Learning: Libraries like TensorFlow and scikit-learn.
+Automation: Scripting and task automation.
+#References:
+Python Software Foundation. (n.d.). Python. Retrieved from https://www.python.org
+VanderPlas, J. (2016). Python Data Science Handbook: Essential Tools for Working with Data. O'Reilly Media.
 
-2. Installing Python:
-   - Describe the steps to install Python on your operating system (Windows, macOS, or Linux). Include how to verify the installation and set up a virtual environment.
+# PYTHON INSTALLATION 
+#Windows:
+Download Python from https://www.python.org.
+Run the installer and check "Add Python to PATH".
+Verify installation with python --version in Command Prompt.
+Create a virtual environment: python -m venv myenv.
 
-3. Python Syntax and Semantics:
-   - Write a simple Python program that prints "Hello, World!" to the console. Explain the basic syntax elements used in the program.
+#References:
+Python Software Foundation. (n.d.). Python Setup and Usage. Retrieved from https://docs.python.org/3/using/index.html
 
-4. Data Types and Variables:
-   - List and describe the basic data types in Python. Write a short script that demonstrates how to create and use variables of different data types.
+# Python Syntax and Semantics
+print("Hello, World!")
+print(): Function to output text to the console.
+"Hello, World!": String literal enclosed in double quotes.
+#References:
+Python Software Foundation. (n.d.). The Python Standard Library: Built-in Functions. Retrieved from https://docs.python.org/3/library/functions.html#print
 
-5. Control Structures:
-   - Explain the use of conditional statements and loops in Python. Provide examples of an `if-else` statement and a `for` loop.
+# DATA TYPES AND VARIABLES
+Integers (int): Whole numbers.
+Floating-point numbers (float): Decimal numbers.
+Strings (str): Text data.
+Booleans (bool): True/False values.
+Lists (list): Ordered collections.
+Dictionaries (dict): Key-value pairs.
+#example
+x = 10          # int
+y = 3.14        # float
+name = "Alice"  # str
+is_student = True  # bool
+numbers = [1, 2, 3]  # list
+person = {"name": "Bob", "age": 25}  # dict
 
-6. Functions in Python:
-   - What are functions in Python, and why are they useful? Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+print(x, y, name, is_student, numbers, person)
 
-7. Lists and Dictionaries:
-   - Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
+#references
+Python Software Foundation. (n.d.). Built-in Types. Retrieved from https://docs.python.org/3/library/stdtypes.html
 
-8. Exception Handling:
-   - What is exception handling in Python? Provide an example of how to use `try`, `except`, and `finally` blocks to handle errors in a Python script.
+# Control Structures
+Conditional Statements: Used to execute code based on conditions.
+Loops: Used to iterate over sequences.
 
-9. Modules and Packages:
-   - Explain the concepts of modules and packages in Python. How can you import and use a module in your script? Provide an example using the `math` module.
+#EXAMPLES
+#if-else statement
+age = 18
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
 
-10. File I/O:
-    - How do you read from and write to files in Python? Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
+#for loop
+for i in range(5):
+    print(i)
 
-# Submission Guidelines:
-- Your answers should be well-structured, concise, and to the point.
-- Provide code snippets or complete scripts where applicable.
-- Cite any references or sources you use in your answers.
-- Submit your completed assignment by [due date].
+#REFFERENCES
+Python Software Foundation. (n.d.). Control Flow Tools. Retrieved from https://docs.python.org/3/tutorial/controlflow.html
 
+# Functions in Python
+Functions are reusable blocks of code that perform a specific task. They help organize code, reduce redundancy, and improve readability.
 
+#EXAMPLES
+def add(a, b):
+    return a + b
+
+#Call the function
+result = add(5, 3)
+print(result)
+
+#REFERENCES
+Python Software Foundation. (n.d.). Defining Functions. Retrieved from https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+
+# Lists and Dictionaries
+Lists: Ordered, mutable collections of elements.
+Dictionaries: Unordered collections of key-value pairs.
+#example
+
+# List example
+numbers = [1, 2, 3, 4, 5]
+numbers.append(6)
+print(numbers)
+
+# Dictionary example
+person = {"name": "Alice", "age": 30}
+person["city"] = "New York"
+print(person)
+#References:
+Python Software Foundation. (n.d.). Data Structures. Retrieved from https://docs.python.org/3/tutorial/datastructures.html
+
+# Exception Handling
+
+Exception handling manages runtime errors, allowing the program to continue execution.
+
+Example:
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("This will always execute")
+#References:
+Python Software Foundation. (n.d.). Errors and Exceptions. Retrieved from https://docs.python.org/3/tutorial/errors.html
+# Modules and Packages
+Modules: Single files containing Python code.
+Packages: Directories containing multiple modules.
+ExAmples
+import math
+print(math.sqrt(16))
+#REFERENCES
+
+Python Software Foundation. (n.d.). Modules. Retrieved from https://docs.python.org/3/tutorial/modules.html
+
+# File I/O
+
+#read from file example
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+#Write to a file
+lines = ["Hello, World!", "Python is great!"]
+with open('output.txt', 'w') as file:
+    for line in lines:
+        file.write(line + '\n')
+#References:
+Python Software Foundation. (n.d.). Reading and Writing Files. Retrieved from https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
